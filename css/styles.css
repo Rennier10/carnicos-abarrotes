@@ -1,0 +1,406 @@
+/* La Despensa del Llano — Cárnicos y Abarrotes
+ * Hoja de estilos principal del sitio.
+ */
+
+:root {
+  --color-primario: #8B0000;
+  --color-primario-oscuro: #5C0000;
+  --color-acento: #F4A300;
+  --color-fondo: #FFF8F0;
+  --color-texto: #2B1A14;
+  --color-texto-suave: #6B5848;
+  --color-tarjeta: #FFFFFF;
+  --color-borde: #EADBC8;
+  --sombra: 0 2px 6px rgba(43, 26, 20, 0.08);
+  --radio: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== Encabezado y navegación ===== */
+.barra-superior {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 0.4rem 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.encabezado {
+  background-color: var(--color-tarjeta);
+  border-bottom: 3px solid var(--color-primario);
+  box-shadow: var(--sombra);
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.encabezado .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--color-texto);
+}
+.marca .logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-primario);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.marca h1 {
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+.marca p {
+  font-size: 0.75rem;
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.menu a {
+  color: var(--color-texto);
+  font-weight: 600;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+.menu a:hover,
+.menu a.activo {
+  color: var(--color-primario);
+  border-bottom-color: var(--color-primario);
+  text-decoration: none;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-primario-oscuro) 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+.boton {
+  display: inline-block;
+  background-color: var(--color-acento);
+  color: var(--color-texto);
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radio);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.boton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(244, 163, 0, 0.35);
+  text-decoration: none;
+}
+
+/* ===== Secciones generales ===== */
+.seccion {
+  padding: 3rem 0;
+}
+.seccion h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primario);
+}
+.seccion .subtitulo {
+  text-align: center;
+  color: var(--color-texto-suave);
+  margin-bottom: 2rem;
+}
+
+/* ===== Tarjetas de bienvenida ===== */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.tarjeta {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+  transition: transform 0.15s ease;
+}
+.tarjeta:hover {
+  transform: translateY(-3px);
+}
+.tarjeta .icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(139, 0, 0, 0.1);
+  color: var(--color-primario);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.tarjeta h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-texto);
+}
+.tarjeta p {
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+}
+
+/* ===== Productos ===== */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.producto {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+}
+.producto .imagen {
+  height: 160px;
+  background-color: #f3e6d2;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+}
+.producto .info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.producto h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+.producto p.descripcion {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+  flex: 1;
+  margin-bottom: 0.8rem;
+}
+.producto .precio {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primario);
+}
+.producto .etiqueta {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-acento);
+  margin-bottom: 0.3rem;
+}
+
+/* ===== Contacto ===== */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 720px) {
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.contacto-info ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.contacto-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  background-color: var(--color-tarjeta);
+  padding: 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+.contacto-info .icono {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: rgba(139, 0, 0, 0.1);
+  color: var(--color-primario);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+.contacto-info strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.contacto-info span {
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+}
+
+.formulario {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+}
+.formulario label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 0.6rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.12);
+}
+.formulario textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.formulario button {
+  width: 100%;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.formulario button:hover {
+  background-color: var(--color-primario-oscuro);
+}
+
+/* ===== Galería ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.galeria figure {
+  background-color: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.galeria .imagen {
+  height: 200px;
+  display: grid;
+  place-items: center;
+  font-size: 3.2rem;
+  color: white;
+}
+.galeria figcaption {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+  border-top: 1px solid var(--color-borde);
+}
+.galeria figcaption strong {
+  display: block;
+  color: var(--color-texto);
+  margin-bottom: 0.2rem;
+}
+
+/* ===== Pie de página ===== */
+.pie {
+  background-color: var(--color-primario-oscuro);
+  color: #f5e6d4;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+}
+.pie p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.pie a {
+  color: var(--color-acento);
+}
+
+/* ===== Utilitarios ===== */
+.texto-centro {
+  text-align: center;
+}
