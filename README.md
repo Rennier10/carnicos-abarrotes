@@ -2,7 +2,9 @@
 
 Sitio web de una empresa local de cárnicos y abarrotes en Villavicencio (Meta), construido como entrega del **Taller Práctico de GitHub** de 2 horas.
 
-> **URL pública (GitHub Pages):** se publicará al final del taller en `https://Rennier10.github.io/carnicos-abarrotes/`
+> **🌐 URL pública (GitHub Pages):** <https://rennier10.github.io/carnicos-abarrotes/>
+>
+> **📦 Repositorio:** <https://github.com/Rennier10/carnicos-abarrotes>
 
 ## Objetivo del taller
 
@@ -31,9 +33,9 @@ carnicos-abarrotes/
 
 | Sección | Rama | Pull request |
 |---|---|---|
-| Catálogo | `feature/catalogo` | PR fusionado a `main` |
-| Contacto | `feature/contacto` | PR fusionado a `main` |
-| Galería | `feature/galeria` | PR fusionado a `main` |
+| Catálogo | `feature/catalogo` | [#1 fusionado](https://github.com/Rennier10/carnicos-abarrotes/pull/1) |
+| Contacto | `feature/contacto` | [#2 fusionado](https://github.com/Rennier10/carnicos-abarrotes/pull/2) |
+| Galería | `feature/galeria` | [#3 fusionado](https://github.com/Rennier10/carnicos-abarrotes/pull/3) |
 
 Cada sección se desarrolló en su propia rama, se subió al repositorio remoto y se integró a `main` mediante un pull request, simulando el trabajo colaborativo de tres equipos del taller.
 
