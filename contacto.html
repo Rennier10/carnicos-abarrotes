@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Información de contacto de La Despensa del Llano: dirección, teléfono, correo y formulario para pedidos."
+    />
+    <title>Contacto · La Despensa del Llano</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="barra-superior">
+      📍 Calle 12 #4-30, Villavicencio · Lunes a sábado de 7:00 a.m. a 8:00 p.m.
+    </div>
+
+    <header class="encabezado">
+      <div class="contenedor">
+        <a class="marca" href="index.html">
+          <span class="logo">🥩</span>
+          <div>
+            <h1>La Despensa del Llano</h1>
+            <p>Cárnicos · Abarrotes · Frescura local</p>
+          </div>
+        </a>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a class="activo" href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <h2>Hablemos</h2>
+        <p class="subtitulo">
+          Estamos disponibles para tomar tu pedido, resolver dudas o coordinar despachos
+          al por mayor.
+        </p>
+
+        <div class="contacto-grid">
+          <div class="contacto-info">
+            <ul>
+              <li>
+                <span class="icono">📍</span>
+                <div>
+                  <strong>Dirección</strong>
+                  <span>Calle 12 #4-30, barrio La Esperanza, Villavicencio (Meta)</span>
+                </div>
+              </li>
+              <li>
+                <span class="icono">📞</span>
+                <div>
+                  <strong>Teléfono</strong>
+                  <span>(+57) 608 663 4500 — fijo</span>
+                </div>
+              </li>
+              <li>
+                <span class="icono">📱</span>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span>(+57) 311 555 8842</span>
+                </div>
+              </li>
+              <li>
+                <span class="icono">✉️</span>
+                <div>
+                  <strong>Correo</strong>
+                  <span>pedidos@despensadelllano.co</span>
+                </div>
+              </li>
+              <li>
+                <span class="icono">🕒</span>
+                <div>
+                  <strong>Horario de atención</strong>
+                  <span>Lunes a sábado · 7:00 a.m. a 8:00 p.m.</span>
+                </div>
+              </li>
+              <li>
+                <span class="icono">🚚</span>
+                <div>
+                  <strong>Domicilios</strong>
+                  <span>Sin costo desde $ 60.000 dentro de Villavicencio.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <form
+            class="formulario"
+            onsubmit="event.preventDefault(); alert('¡Gracias! Tu mensaje fue enviado. Te contactaremos pronto.');"
+          >
+            <h3 style="margin-bottom: 1rem; color: var(--color-primario)">
+              Envíanos un mensaje
+            </h3>
+
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" type="text" placeholder="Ej.: María Gómez" required />
+
+            <label for="telefono">Teléfono o WhatsApp</label>
+            <input id="telefono" type="tel" placeholder="+57 311 000 0000" required />
+
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" type="email" placeholder="tu@correo.com" required />
+
+            <label for="mensaje">¿En qué podemos ayudarte?</label>
+            <textarea
+              id="mensaje"
+              placeholder="Cuéntanos qué necesitas: pedido, cotización, alianza comercial…"
+              required
+            ></textarea>
+
+            <button type="submit">Enviar mensaje →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="pie">
+      <div class="contenedor">
+        <p>© 2026 La Despensa del Llano S.A.S · NIT 901.234.567-8</p>
+        <p>Hecho con ❤️ en Villavicencio</p>
+      </div>
+    </footer>
+  </body>
+</html>
